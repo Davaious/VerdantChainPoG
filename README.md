@@ -1,4 +1,5 @@
 # VerdantChainPoG
+
 1. Resumen Ejecutivo
 VerdantChain es una innovadora criptomoneda diseñada para enfrentar el desafío del impacto ambiental en la tecnología blockchain. Basado en un protocolo de consenso único llamado Proof of Green (PoG), VerdantChain recompensa a los participantes que operan de manera sostenible y ecológica. Con el objetivo de ser la criptomoneda más respetuosa con el medio ambiente, VerdantChain ofrece una plataforma que promueve prácticas sostenibles, fomenta la adopción de energías renovables y proporciona a los usuarios herramientas para minimizar su huella de carbono en el ecosistema blockchain.
 
