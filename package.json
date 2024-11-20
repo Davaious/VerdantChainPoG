@@ -19,8 +19,9 @@
   "preset": "ts-jest",
   "testEnvironment": "node"
 },
+
   "keywords": [],
-  "author": "",
+  "author": "David Alcalde",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.15.0",
