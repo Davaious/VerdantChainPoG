@@ -8,12 +8,17 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "ts-node src/index.ts",
     "dev": "nodemon index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
+
+  "jest": {
+  "preset": "ts-jest",
+  "testEnvironment": "node"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,5 +36,9 @@
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.1"
   }
 }
