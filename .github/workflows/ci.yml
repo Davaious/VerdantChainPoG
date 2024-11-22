@@ -2,13 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
 
 jobs:
   build:
@@ -16,26 +12,34 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run ESLint
-        run: npx eslint --no-cache .
+        run: npx eslint .
+
+      - name: Run Prettier check
+        run: npx prettier --check .
       
       - name: Run tests
         run: npm test
 
-      # Añadir un paso para el build de producción si es necesario
       - name: Build production
-        run: npm run build --if-present
+        run: npm run build
 
-      # Añadir paso para despliegue si es necesario
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      # Despliegue (descomenta y configura según tus necesidades)
       # - name: Deploy to Production
+      #   if: github.ref == 'refs/heads/main'
       #   run: npm run deploy
