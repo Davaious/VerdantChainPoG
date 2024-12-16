@@ -1,9 +1,10 @@
-/* eslint-env node */
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true, // Agrega esto para que reconozca el entorno de Node.js
+    jest: true,
   },
   extends: [
     "eslint:recommended",
@@ -12,17 +13,16 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 12,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true // Habilitar soporte para JSX
-    }
+      jsx: true,
+    },
   },
   plugins: ["@typescript-eslint", "react"],
-
   settings: {
     react: {
-      version: 'detect', // Detectar automáticamente la versión de React
+      version: 'detect',
     },
   },
 };
