@@ -1,20 +1,19 @@
 # VerdantChainPoG
 
 1. Resumen Ejecutivo
-VerdantChain es una innovadora criptomoneda diseñada para enfrentar el desafío del impacto ambiental en la tecnología blockchain. Basado en un protocolo de consenso único llamado Proof of Green (PoG), VerdantChain recompensa a los participantes que operan de manera sostenible y ecológica. Con el objetivo de ser la criptomoneda más respetuosa con el medio ambiente, VerdantChain ofrece una plataforma que promueve prácticas sostenibles, fomenta la adopción de energías renovables y proporciona a los usuarios herramientas para minimizar su huella de carbono en el ecosistema blockchain.
+   VerdantChain es una innovadora criptomoneda diseñada para enfrentar el desafío del impacto ambiental en la tecnología blockchain. Basado en un protocolo de consenso único llamado Proof of Green (PoG), VerdantChain recompensa a los participantes que operan de manera sostenible y ecológica. Con el objetivo de ser la criptomoneda más respetuosa con el medio ambiente, VerdantChain ofrece una plataforma que promueve prácticas sostenibles, fomenta la adopción de energías renovables y proporciona a los usuarios herramientas para minimizar su huella de carbono en el ecosistema blockchain.
 
 2. Problema a Resolver
-El creciente uso de la tecnología blockchain ha llevado a un aumento en el consumo de energía, especialmente en redes que utilizan el protocolo Proof of Work (PoW), que requiere vastos recursos computacionales. Este consumo excesivo contribuye a la huella de carbono global, lo que es incompatible con los objetivos mundiales de sostenibilidad y reducción del cambio climático. Existe una necesidad urgente de una solución blockchain que no solo sea segura y escalable, sino también sostenible y ecológica.
+   El creciente uso de la tecnología blockchain ha llevado a un aumento en el consumo de energía, especialmente en redes que utilizan el protocolo Proof of Work (PoW), que requiere vastos recursos computacionales. Este consumo excesivo contribuye a la huella de carbono global, lo que es incompatible con los objetivos mundiales de sostenibilidad y reducción del cambio climático. Existe una necesidad urgente de una solución blockchain que no solo sea segura y escalable, sino también sostenible y ecológica.
 
 3. Solución Propuesta: VerdantChain
-VerdantChain propone una solución integral que aborda las preocupaciones ambientales al tiempo que mantiene los beneficios inherentes de la tecnología blockchain. Nuestra solución incluye:
+   VerdantChain propone una solución integral que aborda las preocupaciones ambientales al tiempo que mantiene los beneficios inherentes de la tecnología blockchain. Nuestra solución incluye:
 
 Proof of Green (PoG): Un protocolo de consenso que incentiva el uso de energías renovables y prácticas sostenibles. Los validadores son seleccionados en función de su "green score," que evalúa su impacto ambiental.
 Recompensas Ecológicas: Un sistema que premia a los usuarios y proyectos que demuestran prácticas sostenibles, contribuyendo a un ecosistema más verde.
 Smart Contracts Ecológicos: Contratos inteligentes que permiten la verificación y certificación de prácticas sostenibles, promoviendo la adopción de medidas ecológicas en toda la red.
 Green Wallet: Una billetera digital diseñada para rastrear y optimizar la huella de carbono de los usuarios, proporcionándoles métricas de sostenibilidad y recomendaciones.
-DAO para Gobernanza Verde: Una organización autónoma descentralizada que gestiona VerdantChain, con un enfoque en la sostenibilidad y la toma de decisiones basada en criterios ambientales.
-4. Arquitectura Técnica
+DAO para Gobernanza Verde: Una organización autónoma descentralizada que gestiona VerdantChain, con un enfoque en la sostenibilidad y la toma de decisiones basada en criterios ambientales. 4. Arquitectura Técnica
 4.1 Protocolo Proof of Green (PoG)
 
 Mecanismo de Consenso: Proof of Green (PoG) es un protocolo que selecciona validadores en función de su impacto ambiental. Los validadores deben demostrar el uso de energías renovables y otras prácticas sostenibles para aumentar su green score.
@@ -31,8 +30,7 @@ Funcionalidades: La wallet ofrece recomendaciones para reducir la huella de carb
 4.4 DAO para Gobernanza Verde
 
 Modelo de Gobernanza: VerdantChain es gestionado por una DAO que toma decisiones basadas en criterios de sostenibilidad. Los participantes pueden votar sobre propuestas que afectan el futuro de la red.
-Tokens de Gobernanza: Los tokens de gobernanza se distribuyen entre los participantes que contribuyen a la sostenibilidad del ecosistema, dando voz y poder de decisión a aquellos que impulsan la misión ecológica de VerdantChain.
-5. Modelo Económico
+Tokens de Gobernanza: Los tokens de gobernanza se distribuyen entre los participantes que contribuyen a la sostenibilidad del ecosistema, dando voz y poder de decisión a aquellos que impulsan la misión ecológica de VerdantChain. 5. Modelo Económico
 5.1 Distribución de Tokens
 
 Emisión Total de Tokens: Se emitirá un número finito de tokens para garantizar la escasez y el valor. Los tokens estarán destinados a varias iniciativas, incluyendo recompensas para validadores, desarrollo, marketing, y fondos de reserva para la DAO.
@@ -44,8 +42,7 @@ Staking Verde: Un programa de staking que ofrece mayores recompensas para proyec
 5.3 Economía Circular
 
 Mantenimiento del Valor: La economía de VerdantChain está diseñada para mantener un equilibrio entre la oferta y la demanda de tokens, garantizando su estabilidad y crecimiento a largo plazo.
-Reinversión en Sostenibilidad: Una parte de las comisiones de la red se reinvertirá en iniciativas de sostenibilidad, apoyando proyectos ecológicos tanto dentro como fuera de la red.
-6. Impacto y Sostenibilidad
+Reinversión en Sostenibilidad: Una parte de las comisiones de la red se reinvertirá en iniciativas de sostenibilidad, apoyando proyectos ecológicos tanto dentro como fuera de la red. 6. Impacto y Sostenibilidad
 6.1 Reducción de Huella de Carbono
 
 Objetivos Ambientales: VerdantChain tiene como objetivo convertirse en la criptomoneda con la menor huella de carbono, liderando la transición hacia una economía digital sostenible.

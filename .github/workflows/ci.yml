@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm ci
@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Prettier check
         run: npx prettier --check .
-      
+
       - name: Run tests
         run: npm test
 
@@ -36,9 +36,8 @@ jobs:
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        env: 
+        env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-                  # Asegúrate de que este secreto esté configurado en GitHub 
 
       - name: Generate documentation
         run: npm run docs
@@ -54,7 +53,7 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          text: 'Pipeline failed!'
+          text: "Pipeline failed!"
 
       # Despliegue (descomenta y configura según tus necesidades)
       # - name: Deploy to Production
