@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu--22-04
 
     steps:
       - name: Check out code
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
@@ -41,19 +41,6 @@ jobs:
 
       - name: Generate documentation
         run: npm run docs
-
-      - name: Deploy documentation
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-
-      - name: Notify on failure
-        if: failure()
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          text: "Pipeline failed!"
 
       # Despliegue (descomenta y configura según tus necesidades)
       # - name: Deploy to Production
