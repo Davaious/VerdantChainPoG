@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    jest: true,
+    jest: true, // Incluye soporte para pruebas con Jest
   },
   extends: [
     'eslint:recommended',
@@ -17,19 +17,21 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
+      jsx: true, // Soporte para JSX
     },
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error', // Aplica reglas de Prettier como errores
-    '@typescript-eslint/no-unused-vars': 'warn', // Marca las variables no usadas como advertencia
-    'react/react-in-jsx-scope': 'off', // No es necesario importar React en JSX con nuevas versiones
-    'react/prop-types': 'off', // Desactiva las validaciones de PropTypes en favor de TypeScript
+    'prettier/prettier': 'error', // Marca errores de estilo como errores de ESLint
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // Permite variables sin usar que empiezan con "_"
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // No obliga a declarar tipos en funciones
+    'react/react-in-jsx-scope': 'off', // Compatible con React 17+
+    'react/prop-types': 'off', // No usa PropTypes porque TypeScript ya valida los tipos
+    'no-console': 'warn', // Advertencia en lugar de error al usar console.log
   },
   settings: {
     react: {
-      version: 'detect',
+      version: 'detect', // Detecta automáticamente la versión de React
     },
   },
 };
