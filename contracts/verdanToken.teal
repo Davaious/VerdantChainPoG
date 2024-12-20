@@ -1,0 +1,15 @@
+// verdanToken.teal
+// Algorand Smart Contract (ASA) para el token VerdanToken
+
+txn Fee
+int 0
+==
+txn TypeEnum
+int 4 // ApplicationCall
+==
+&&
+txn ApplicationID
+int 0
+==
+&&
+return
