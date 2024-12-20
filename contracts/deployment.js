@@ -1,5 +1,5 @@
 // contracts/deployment.js
-const algosdk = require('algosdk');
+import { Algodv2, mnemonicToSecretKey, makeAssetCreateTxnWithSuggestedParams } from 'algosdk';
 
 // Configuración de la red
 const algodToken = "your-algod-token";
@@ -16,12 +16,12 @@ const params = {
 };
 
 const deployToken = async () => {
-  const algodClient = new algosdk.Algodv2(algodToken, algodServer, algodPort);
+  const algodClient = new Algodv2(algodToken, algodServer, algodPort);
 
-  const account = algosdk.mnemonicToSecretKey("your-25-word-mnemonic");
+  const account = mnemonicToSecretKey("your-25-word-mnemonic");
 
   const suggestedParams = await algodClient.getTransactionParams().do();
-  const txn = algosdk.makeAssetCreateTxnWithSuggestedParams(
+  const txn = makeAssetCreateTxnWithSuggestedParams(
     account.addr,
     undefined,
     params.total,
