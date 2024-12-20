@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const validatorRoutes = require('./routes/validatorRoutes');
 const tokenRoutes = require('./routes/tokenRoutes');
+const tealCompiler = require('./utils/tealCompiler');
 
 dotenv.config();
 const app = express();
