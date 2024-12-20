@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu--22-04
+    runs-on: ubuntu-22.04 # Corrección del nombre del runner
 
     steps:
       - name: Check out code
@@ -17,30 +17,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18' # Node.js versión 18
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run ESLint
-        run: npx eslint .
+        run: npx eslint . # Ejecuta ESLint en todo el proyecto
 
       - name: Run Prettier check
-        run: npx prettier --check .
+        run: npx prettier --check . # Verifica el estilo del código
 
       - name: Run tests
-        run: npm test
+        run: npm test # Ejecuta las pruebas
 
       - name: Build production
-        run: npm run build
+        run: npm run build # Construye el proyecto para producción
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }} # Requiere el token en los secretos
 
       - name: Generate documentation
-        run: npm run docs
+        run: npm run docs # Genera la documentación automáticamente
 
       # Despliegue (descomenta y configura según tus necesidades)
       # - name: Deploy to Production
