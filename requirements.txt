@@ -538,3 +538,4 @@ zope=1.0=py312hca03da5_1
 zope.interface=5.4.0=py312h80987f9_0
 zstandard=0.22.0=py312h1a4646a_0
 zstd=1.5.5=hd90d995_2
+pyteal>=0.23.0
