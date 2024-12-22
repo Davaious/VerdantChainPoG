@@ -52,18 +52,20 @@ Monitoreo y Reportes: Se implementarán herramientas de monitoreo para rastrear 
 Asociaciones con Proyectos Ecológicos: VerdantChain buscará alianzas con ONG, empresas de energías renovables, y proyectos tecnológicos verdes para expandir su impacto y promover la adopción de prácticas sostenibles.
 Integración con Industrias Verdes: VerdantChain apoyará la integración con mercados de carbono, sistemas de créditos de energía y otras plataformas ecológicas para fomentar una economía más verde.
 
-
 # VerdantChainPoG
 
 ## Descripción
+
 VerdantChainPoG es un proyecto que implementa el algoritmo de consenso Proof of Green (PoG), incentivando el uso de energía verde y la reducción de huella de carbono a través de blockchain.
 
 ## Características
+
 - **Token Nativo:** VerdanToken (basado en Algorand ASA).
 - **Algoritmo Green Score:** Selección de validadores según criterios ecológicos.
 - **Marketplace:** Intercambio de bienes y certificados de huella de carbono.
 
 ## Estructura del Proyecto
+
 ```
 project/
 ├── backend/
@@ -82,7 +84,9 @@ project/
 ```
 
 ## Instalación
+
 ### Backend
+
 1. Instala dependencias:
    ```bash
    cd backend
@@ -102,6 +106,7 @@ project/
    ```
 
 ### Frontend
+
 1. Instala dependencias:
    ```bash
    cd frontend
@@ -113,31 +118,37 @@ project/
    ```
 
 ## Uso
+
 - Accede a `http://localhost:3000` para ver la interfaz de usuario.
 - Utiliza `http://localhost:5000/api` para interactuar con las APIs del backend.
 
 ## Docker
+
 1. Construye y ejecuta los servicios:
    ```bash
    docker-compose up --build
    ```
 
 ## Contribuciones
+
 Se aceptan contribuciones para mejorar el algoritmo y la implementación del proyecto. Por favor, abre un issue o envía un pull request.
 
-
 // README.md
+
 # VerdantChainPoG
 
 ## Descripción
+
 VerdantChainPoG es un proyecto que implementa el algoritmo de consenso Proof of Green (PoG), incentivando el uso de energía verde y la reducción de huella de carbono a través de blockchain.
 
 ## Características
+
 - **Token Nativo:** VerdanToken (basado en Algorand ASA).
 - **Algoritmo Green Score:** Selección de validadores según criterios ecológicos.
 - **Marketplace:** Intercambio de bienes y certificados de huella de carbono.
 
 ## Estructura del Proyecto
+
 ```
 project/
 ├── backend/
@@ -160,7 +171,9 @@ project/
 ```
 
 ## Instalación
+
 ### Backend
+
 1. Instala dependencias:
    ```bash
    cd backend
@@ -180,14 +193,17 @@ project/
    ```
 
 ## Uso
+
 - Compila los contratos con PyTeal antes de desplegarlos en la blockchain de Algorand.
 - Utiliza `http://localhost:5000/api` para interactuar con las APIs del backend.
 
 ## Docker
+
 1. Construye y ejecuta los servicios:
    ```bash
    docker-compose up --build
    ```
 
 ## Contribuciones
+
 Se aceptan contribuciones para mejorar el algoritmo y la implementación del proyecto. Por favor, abre un issue o envía un pull request.

@@ -14,7 +14,10 @@ const getValidators = async (req, res) => {
 const calculateGreenScore = async (req, res) => {
   const { energySource, efficiency } = req.body;
   try {
-    const score = GreenScoreService.calculateGreenScore(energySource, efficiency);
+    const score = GreenScoreService.calculateGreenScore(
+      energySource,
+      efficiency
+    );
     res.json({ greenScore: score });
   } catch (error) {
     res.status(500).json({ error: 'Error calculating Green Score' });

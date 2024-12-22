@@ -1,6 +1,9 @@
 // backend/routes/validatorRoutes.js
 const express = require('express');
-const { getValidators, calculateGreenScore } = require('../controllers/validatorController');
+const {
+  getValidators,
+  calculateGreenScore,
+} = require('../controllers/validatorController');
 
 const router = express.Router();
 

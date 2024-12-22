@@ -22,16 +22,27 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error', // Marca errores de estilo como errores de ESLint
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // Permite variables sin usar que empiezan con "_"
-    '@typescript-eslint/explicit-module-boundary-types': 'off', // No obliga a declarar tipos en funciones
-    'react/react-in-jsx-scope': 'off', // Compatible con React 17+
-    'react/prop-types': 'off', // No usa PropTypes porque TypeScript ya valida los tipos
-    'no-console': 'warn', // Advertencia en lugar de error al usar console.log
+    rules: {
+      'prettier/prettier': 'error',
+      '@typescript-eslint/no-var-requires': 'off', // Desactiva advertencias para "require"
+      'no-undef': 'off', // Evita que ESLint marque variables globales como "require" o "process" como indefinidas
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+    },
   },
   settings: {
     react: {
       version: 'detect', // Detecta automáticamente la versión de React
     },
   },
+
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off', // Solo para archivos JavaScript
+      },
+    },
+  ],
 };

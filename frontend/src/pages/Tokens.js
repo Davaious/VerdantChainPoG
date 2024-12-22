@@ -21,13 +21,20 @@ const Tokens = () => {
         onChange={(e) => setAssetId(e.target.value)}
         className="p-2 rounded-lg text-black"
       />
-      <button onClick={handleFetch} className="ml-4 px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg">
+      <button
+        onClick={handleFetch}
+        className="ml-4 px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg"
+      >
         Fetch Info
       </button>
       {tokenInfo && (
         <div className="mt-4">
-          <p><strong>Name:</strong> {tokenInfo.params.name}</p>
-          <p><strong>Total Supply:</strong> {tokenInfo.params.total}</p>
+          <p>
+            <strong>Name:</strong> {tokenInfo.params.name}
+          </p>
+          <p>
+            <strong>Total Supply:</strong> {tokenInfo.params.total}
+          </p>
         </div>
       )}
     </div>

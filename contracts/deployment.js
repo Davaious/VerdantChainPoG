@@ -1,24 +1,28 @@
 // contracts/deployment.js
-import { Algodv2, mnemonicToSecretKey, makeAssetCreateTxnWithSuggestedParams } from 'algosdk';
+import {
+  Algodv2,
+  mnemonicToSecretKey,
+  makeAssetCreateTxnWithSuggestedParams,
+} from 'algosdk';
 
 // Configuración de la red
-const algodToken = "your-algod-token";
-const algodServer = "https://testnet-algorand.api.purestake.io/ps2";
-const algodPort = "";
+const algodToken = 'your-algod-token';
+const algodServer = 'https://testnet-algorand.api.purestake.io/ps2';
+const algodPort = '';
 
 // Configuración del ASA
 const params = {
   total: 100000000, // Suministro total
   decimals: 2, // Decimales
   defaultFrozen: false,
-  unitName: "VRT",
-  assetName: "VerdanToken",
+  unitName: 'VRT',
+  assetName: 'VerdanToken',
 };
 
 const deployToken = async () => {
   const algodClient = new Algodv2(algodToken, algodServer, algodPort);
 
-  const account = mnemonicToSecretKey("your-25-word-mnemonic");
+  const account = mnemonicToSecretKey('your-25-word-mnemonic');
 
   const suggestedParams = await algodClient.getTransactionParams().do();
   const txn = makeAssetCreateTxnWithSuggestedParams(
@@ -38,7 +42,7 @@ const deployToken = async () => {
 
   const signedTxn = txn.signTxn(account.sk);
   const response = await algodClient.sendRawTransaction(signedTxn).do();
-  console.log("Asset created. Transaction ID:", response.txId);
+  console.log('Asset created. Transaction ID:', response.txId);
 };
 
 deployToken();
