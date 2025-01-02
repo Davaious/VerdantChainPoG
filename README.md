@@ -180,6 +180,7 @@ project/
    npm install
    ```
 2. Configura variables en `.env`:
+
    ```
    DB_USER=youruser
    DB_PASSWORD=yourpassword
