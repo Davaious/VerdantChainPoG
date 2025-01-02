@@ -19,6 +19,8 @@ app.use('/api/token', tokenRoutes);
 
 // Configuración del puerto
 const PORT = process.env.PORT || 5000;
+
+//Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 });
