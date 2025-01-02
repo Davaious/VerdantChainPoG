@@ -1,10 +1,10 @@
 // backend/config/algorand.js
-const algosdk = require('algosdk');
+import algosdk from 'algosdk';
 
-const algodClient = new algosdk.Algodv2(
-  process.env.ALGOD_TOKEN,
-  process.env.ALGOD_SERVER,
-  process.env.ALGOD_PORT
-);
+const algodToken = process.env.ALGOD_TOKEN;
+const algodServer = process.env.ALGOD_SERVER;
+const algodPort = process.env.ALGOD_PORT;
 
-module.exports = algodClient;
+const algodClient = new algosdk.Algodv2(algodToken, algodServer, algodPort);
+
+export default algodClient;
