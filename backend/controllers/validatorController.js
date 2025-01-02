@@ -1,27 +1,31 @@
 // backend/controllers/validatorController.js
-const Validator = require('../models/Validator');
-const GreenScoreService = require('../services/greenScoreService');
+import Validator from '../models/Validator.js';
+import GreenScore from '../models/GreenScore.js';
 
 const getValidators = async (req, res) => {
   try {
-    const validators = await Validator.getAll();
-    res.json(validators);
+    const validators = await Validator.findAll();
+    res.status(200).json(validators);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching validators' });
+    console.error(error);
+    res.status(500).json({ error: 'Error al obtener validadores' });
   }
 };
 
-const calculateGreenScore = async (req, res) => {
-  const { energySource, efficiency } = req.body;
-  try {
-    const score = GreenScoreService.calculateGreenScore(
-      energySource,
-      efficiency
-    );
-    res.json({ greenScore: score });
-  } catch (error) {
-    res.status(500).json({ error: 'Error calculating Green Score' });
-  }
+export default { getValidators };
+
+// Posible integración con Polkadot
+// Se puede integrar Polkadot usando la biblioteca @polkadot/api para conectarse a un nodo y
+// gestionar interoperabilidad. Ejemplo inicial:
+import { ApiPromise, WsProvider } from '@polkadot/api';
+
+const connectPolkadot = async () => {
+  const wsProvider = new WsProvider('wss://rpc.polkadot.io');
+  const api = await ApiPromise.create({ provider: wsProvider });
+
+  console.log('Conectado a Polkadot:', api.genesisHash.toHex());
+
+  return api;
 };
 
-module.exports = { getValidators, calculateGreenScore };
+export { connectPolkadot };

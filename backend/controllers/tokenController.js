@@ -1,14 +1,38 @@
 // backend/controllers/tokenController.js
-const algodClient = require('../config/algorand');
+import algosdk from 'algosdk';
+import algodClient from '../config/algorand.js';
 
-const getTokenInfo = async (req, res) => {
+const createToken = async (req, res) => {
   try {
-    const assetId = req.params.assetId;
-    const assetInfo = await algodClient.getAssetByID(assetId).do();
-    res.json(assetInfo);
+    const { name, totalSupply, decimals } = req.body;
+
+    const params = await algodClient.getTransactionParams().do();
+    const txn = algosdk.makeAssetCreateTxnWithSuggestedParams(
+      process.env.CREATOR_ADDRESS,
+      undefined,
+      totalSupply,
+      decimals,
+      false,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      name,
+      undefined,
+      undefined,
+      params
+    );
+
+    const signedTxn = txn.signTxn(Buffer.from(process.env.CREATOR_PRIVATE_KEY, 'base64'));
+    const sendTxn = await algodClient.sendRawTransaction(signedTxn).do();
+
+    res.status(200).json({ txId: sendTxn.txId, message: 'Token creado exitosamente' });
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching token info' });
+    console.error(error);
+    res.status(500).json({ error: 'Error al crear el token' });
   }
 };
 
-module.exports = { getTokenInfo };
+export default { createToken };
